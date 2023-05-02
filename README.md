@@ -3,4 +3,4 @@
 ## About JADeveloppement
 
 My name is Jalal AISSAOUI, and I am a self-taught fullstack web developper. In this repository, you'll find the source to my page "Examples" of all projects I already did since I began coding my first webpage.
-I am actually updating all my old project to fit the current changes and it allows me to train myself with everything I already know and allows me to update my knowledges and better my practice. 
+I am actually updating all my old projects to fit the current requirements and it allows me to train myself with everything I already know and  to update my knowledges and better my practice. 
