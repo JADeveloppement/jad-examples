@@ -7,7 +7,7 @@
 /storage/*.key
 /vendor
 /storage/*
-/test/*
+/tests/*
 .env
 .env.example
 .env.backup

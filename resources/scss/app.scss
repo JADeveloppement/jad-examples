@@ -110,7 +110,7 @@ header > .right > a {
             @apply bg-orange-500 text-white;
 
             > .news-container {
-                @apply w-[100vw] grid grid-cols-1 gap-4 p-4 sm:grid-cols-3 sm:w-[75%];
+                @apply w-[100vw] grid grid-cols-1 gap-4 p-4 sm:grid-cols-3 sm:w-[75%] md:text-white;
 
                 label[for=email]{
                     @apply text-slate-500 ;

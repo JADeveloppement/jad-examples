@@ -29,6 +29,11 @@
                 <a href="">Cursus & Travaux</a>
                 <a href="">Contact</a>
             </div>
+            <div class="right mobile">
+                <a href="">Accueil</a>
+                <a href="">Cursus & Travaux</a>
+                <a href="">Contact</a>
+            </div>
         </header>
 
         <section>
