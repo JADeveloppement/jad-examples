@@ -21,6 +21,11 @@ header > .right > a {
     color: black;
 }
 
+important {
+    color: orange ;
+    font-weight: bold;
+}
+
 @layer components {
 
     .important {
@@ -87,6 +92,22 @@ header > .right > a {
         @apply w-full h-fit p-8 flex flex-col items-center ;
 
         &:first-of-type {
+            
+            > .profil {
+                @apply w-[90%] flex items-center justify-center ;
+
+                > img {
+                    @apply w-[400px] rounded-lg shadow-md object-cover m-4 ;
+                }
+
+                > .right {
+                    @apply bg-white rounded-lg shadow-md text-center p-8 ;
+
+                    > .part1, > .part2, > .part3, > .part4 {
+                        @apply transition-all ;
+                    }
+                }
+            }
             
             > .travaux-container {
                 @apply p-8 w-full flex flex-wrap justify-center ;
