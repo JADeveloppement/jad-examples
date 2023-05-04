@@ -87,7 +87,46 @@ header > .right > a {
         @apply w-full h-fit p-8 flex flex-col items-center ;
 
         &:first-of-type {
-            @apply h-screen ;
+            
+            > .travaux-container {
+                @apply p-8 w-full flex flex-wrap justify-center ;
+
+                > .travaux {
+                    @apply w-[400px] h-[400px] m-8 flex flex-col bg-white rounded-lg shadow-md transition-all cursor-pointer relative overflow-hidden hover:scale-105 ;
+
+                    > .description {
+                        @apply absolute p-8 flex flex-col top-0 left-0 w-full h-full bg-black/90 text-white transition-all items-center justify-center ;
+
+                        > p {
+                            @apply text-center ;
+                        }
+
+                        > a {
+                            @apply w-full ;
+
+                            > .btn {
+                                @apply w-full text-white ;
+                            }
+                        }
+                    }
+
+                    > img {
+                        @apply w-[100%] object-cover ;
+                    }
+                    
+                    > .details {
+                        @apply p-4 w-full flex items-center justify-center grow ;
+
+                        > h2 {
+                            @apply text-center ;
+                        }
+
+                        > p {
+                            @apply text-center ;
+                        }
+                    }
+                }
+            }
         }
 
         &:nth-of-type(2){
@@ -118,4 +157,12 @@ header > .right > a {
             }
         }
     }
+}
+
+.travaux > .description {
+    opacity: 0;
+}
+
+.travaux:hover > .description {
+    opacity: 1;
 }

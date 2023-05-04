@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ env('APP_NAME') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -33,6 +33,116 @@
 
         <section>
             <h2 class="text-white">Mes différents travaux</h2>
+            <div class="travaux-container">
+                
+                <!-- JADeveloppement -->
+                <div class="travaux">
+                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/05/Capture-decran-du-2023-05-04-03-29-52.png" alt="">
+                    <div class="description">
+                        <p>
+                            Site web vitrine personnel.
+                            <br>
+                            <br><i>CMS : Wordpress</i>
+                            <br><i>Frameworks: Laravel, VueJS, Tailwind-CSS</i>
+                            <br>
+                        </p>
+                        <a href="" target="_blank"><button class="btn btn-warning" disabled>Vous y êtes</button></a>
+                    </div>
+                    <div class="details">
+                        <h2>JADeveloppement</h2>
+                    </div>
+                </div>
+
+                <!-- InnerSens -->
+                <div class="travaux">
+                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/05/Capture-decran-du-2023-05-04-03-46-11.png" alt="">
+                    <div class="description">
+                        <p>
+                            Site web vitrine.
+                            <br>
+                            <br><i>CMS : Wordpress</i>
+                            <br><i>Langages utilisés : HTML, CSS, jQuery</i>
+                            <br>
+                        </p>
+                        <a href="https://jeremyvalance.fr" target="_blank"><button class="btn btn-warning">Visiter</button></a>
+                    </div>
+                    <div class="details">
+                        <h2>InnerSens</h2>
+                    </div>
+                </div>
+
+                <!-- Arthur Ivan -->
+                <div class="travaux">
+                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/05/Capture-decran-du-2023-05-04-03-34-36.png" alt="">
+                    <div class="description">
+                        <p>
+                            Site web vitrine avec espace client, système de paiement en ligne, gestion de RDV.
+                            <br>
+                            <br><i>CMS : Wordpress</i>
+                            <br><i>Frameworks: Laravel, VueJS, Tailwind-CSS</i>
+                            <br>
+                        </p>
+                        <a href="https://arthurivan.com" target="_blank"><button class="btn btn-warning">Visiter</button></a>
+                    </div>
+                    <div class="details">
+                        <h2>FRBG</h2>
+                    </div>
+                </div>
+
+                <!-- Twitch -->
+                <div class="travaux">
+                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/05/Capture-decran-du-2023-05-04-03-41-29.png" alt="">
+                    <div class="description">
+                        <p>
+                            Landing page. API Twitch, Youtube
+                            <br>
+                            <br><i>CMS : Wordpress</i>
+                            <br><i>Langages : HTML, CSS, jQuery</i>
+                            <br>
+                        </p>
+                        <a href="https://jadeveloppement.fr/index.php/twitch/" target="_blank"><button class="btn btn-warning">Visiter</button></a>
+                    </div>
+                    <div class="details">
+                        <h2>Twitch</h2>
+                    </div>
+                </div>
+
+                <!-- Artdesignagencement -->
+                <div class="travaux">
+                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/05/Capture-decran-du-2023-05-04-03-44-22.png" alt="">
+                    <div class="description">
+                        <p>
+                            Site web vitrine.
+                            <br>
+                            <br><i>CMS : Wordpress</i>
+                            <br>
+                        </p>
+                        <a href="https://jadeveloppement.fr/index.php/artdesignagencement/" target="_blank"><button class="btn btn-warning">Visiter</button></a>
+                    </div>
+                    <div class="details">
+                        <h2>ArtDesignAgencement</h2>
+                    </div>
+                </div>
+
+                <!-- Démocrite -->
+                <div class="travaux">
+                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/Capture-decran-du-2023-04-26-21-35-10.png" alt="">
+                    <div class="description">
+                        <p>
+                            Site web vitrine avec espace client, système de paiement en ligne, suivi de révision
+                            <br>
+                            <br><i>Langages : PHP, HTML, CSS, jQuery, MySQL</i>
+                            <br><i>Frameworks: Laravel, Tailwind-CSS</i>
+                            <br>
+                        </p>
+                        <a href="https://jadeveloppement.fr/jad-examples/democrite/" target="_blank"><button class="btn btn-warning">Visiter</button></a>
+                    </div>
+                    <div class="details">
+                        <h2>Démocrite</h2>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <section>

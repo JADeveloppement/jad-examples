@@ -8,4 +8,4 @@ mix.js('resources/js/app.js', 'public/js')
 .browserSync({
     proxy: 'localhost:8000',
     notify: false
- });;
+ });
