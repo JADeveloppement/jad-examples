@@ -38,7 +38,7 @@
             <h2 class="text-white">Qui suis-je ?</h2>
             <div class="profil">
                 <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/profil.jpg" alt="">
-                <div id="myDiv" class="right" data-role="page">
+                <div class="right">
                     <div class="part1">
                         <p>
                         Étudiant en médecine de formation depuis Septembre 2013, j’ai validé avec brio une première année en <important>Mathématiques et 
