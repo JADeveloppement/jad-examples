@@ -10,12 +10,15 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+        <!-- Bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
         
         <!-- CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     </head>
     <body class="antialiased">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-pdIs13zgsU97G1U6/CLw6hPZ8FrP+oNzA6n1ddBNQzW8T1egcQ+ZRBrRwvbHkZr8" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <div class="background">
             <img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/html-color-codes-color-tutorials-hero-scaled.jpg" alt="">
         </div>
@@ -35,7 +38,7 @@
             <h2 class="text-white">Qui suis-je ?</h2>
             <div class="profil">
                 <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/profil.jpg" alt="">
-                <div class="right">
+                <div id="myDiv" class="right" data-role="page">
                     <div class="part1">
                         <p>
                         Étudiant en médecine de formation depuis Septembre 2013, j’ai validé avec brio une première année en <important>Mathématiques et 
@@ -81,7 +84,19 @@
                             </ul>
                         </p>
                     </div>
+
+                    <div class="progress-profil"></div>
+
+                    <div class="navigator text-[0.5rem] text-orange-500">
+                        <i class="bi bi-circle-fill" data-nav data="part1"></i>
+                        <i class="bi bi-circle" data-nav data="part2"></i>
+                        <i class="bi bi-circle" data-nav data="part3"></i>
+                        <i class="bi bi-circle" data-nav data="part4"></i>
+                    </div>
                 </div>
+                <script>
+                    
+                </script>
             </div>
             <h2 class="text-white">Mes différents travaux</h2>
             <div class="travaux-container">
@@ -199,16 +214,17 @@
         <section>
             <h2>Exigez la qualité</h2>
             <div class="separator"></div>
-            <p class="text-center w-[650px] text-lg">
+            <p class="text-center max-w-[650px] text-lg">
                 Depuis <span class="important">2015</span>, je travaille en étroite collaboration avec mes différents clients pour proposer un contenu qui leur ressemble, et qui leur convient car la <span class="important">communication</span> est un outil clé pour réussir tout projet.
                 <br>
                 <span class="important">Autodidacte</span> depuis 2012, j’ai su m’adapter avec les demandes et l’évolution des technologies que j’ai appris à maîtriser grâce à une <span class="important">diversité d’exercice</span> tout au long de ma formation (application mobile, web, solution logicielles, etc).
             </p>
             <div class="separator"></div>
-            <p class="text-orange-400 w-[650px] zoom-on-hover text-lg important text-center">
+            <p class="text-orange-400 max-w-[650px] zoom-on-hover text-lg important text-center">
                 Travailler avec moi, c’est s’assurer un travail fait minutieusement et professionnellement.
             </p>
         </section>
+
         <section>
             <h2 class="text-center text-white">Mes compétences</h2>
             <div class="competences">
@@ -230,8 +246,9 @@
                 <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/GitHub-Mark.png" alt="">
             </div>
         </section>
+
         <section>
-                <h2>N'hésitez pas et contactez moi</h2>
+                <h2 class="text-center">N'hésitez pas et contactez moi</h2>
                 <div class="separator"></div>
                 <div class="news-container">
                     <div class="form-floating mr-3">

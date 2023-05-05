@@ -48,7 +48,7 @@ important {
         @apply w-full p-8 flex flex-row justify-between bg-white shadow-sm ;
 
         > .left {
-            @apply w-fit flex flex-row items-center ;
+            @apply w-full flex flex-row items-center justify-center md:justify-normal md:w-fit ;
 
             > img {
                 @apply w-[70px] object-cover mr-4;
@@ -60,7 +60,7 @@ important {
         }
 
         > .right {
-            @apply w-fit flex items-center ;
+            @apply w-fit items-center hidden md:flex;
 
             > a {
                 @apply mr-4 cursor-pointer transition-all hover:underline ;
@@ -94,14 +94,14 @@ important {
         &:first-of-type {
             
             > .profil {
-                @apply w-[90%] flex items-center justify-center ;
+                @apply w-[90%] flex flex-col items-center justify-center m-4 lg:flex-row ;
 
                 > img {
                     @apply w-[400px] rounded-lg shadow-md object-cover m-4 ;
                 }
 
                 > .right {
-                    @apply bg-white rounded-lg shadow-md text-center p-8 ;
+                    @apply bg-white rounded-lg shadow-md text-center p-8 relative ;
 
                     > .part1, > .part2, > .part3, > .part4 {
                         @apply transition-all ;
@@ -110,10 +110,10 @@ important {
             }
             
             > .travaux-container {
-                @apply p-8 w-full flex flex-wrap justify-center ;
+                @apply py-8 px-0 w-full flex flex-wrap justify-center md:py-8 md:px-8 ;
 
                 > .travaux {
-                    @apply w-[400px] h-[400px] m-8 flex flex-col bg-white rounded-lg shadow-md transition-all cursor-pointer relative overflow-hidden hover:scale-105 ;
+                    @apply w-full my-8 mx-0 flex flex-col bg-white rounded-lg shadow-md transition-all cursor-pointer relative overflow-hidden hover:scale-105 md:w-[400px] md:h-[400px] md:m-8 ;
 
                     > .description {
                         @apply absolute p-8 flex flex-col top-0 left-0 w-full h-full bg-black/90 text-white transition-all items-center justify-center ;
@@ -158,10 +158,10 @@ important {
             @apply bg-white/30 ;
             
             > .competences {
-                @apply flex flex-row flex-wrap items-center justify-center w-[100vw] sm:w-[75%];
+                @apply flex flex-row flex-wrap items-center justify-center w-[100vw] md:w-[75%];
     
                 > img {
-                    @apply h-[50px] object-cover m-4 cursor-pointer transition-all hover:scale-110 hover:bg-white hover:rounded-md hover:shadow-md hover:p-4 sm:h-[100px] ;
+                    @apply h-[50px] object-cover m-4 cursor-pointer transition-all hover:scale-110 hover:bg-white hover:rounded-md hover:shadow-md hover:p-4 md:h-[100px] ;
                 }
             }
         }
@@ -170,7 +170,11 @@ important {
             @apply bg-orange-500 text-white;
 
             > .news-container {
-                @apply w-[100vw] grid grid-cols-1 gap-4 p-4 sm:grid-cols-3 sm:w-[75%] md:text-white;
+                @apply w-[100vw] grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:w-[75%] md:text-white;
+
+                .form-floating {
+                    @apply w-full ;
+                }
 
                 label[for=email]{
                     @apply text-slate-500 ;
@@ -186,4 +190,21 @@ important {
 
 .travaux:hover > .description {
     opacity: 1;
+}
+
+.animate-grow {
+    transition: all var(--duration) linear;
+}
+
+.right > .progress-profil {
+    width: 0;
+    padding: 3px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+:root {
+    --duration: 60s;
 }
