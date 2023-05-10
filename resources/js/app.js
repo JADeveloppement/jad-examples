@@ -7,6 +7,30 @@ $(".progress-profil").addClass("animate-grow").css("width", "100%");
 let par = 1;
 const DURATION = 60000;
 
+let pro = 0, max_pro = 7;
+$(".prev-pro").addClass("opacity-50");
+
+$(".next-pro").on("click", function(){
+    if (pro < max_pro-1){
+        $(".carre-container[target="+pro+"]").css("margin-left", "-100%");
+        pro++;
+        if (pro >= 1) $(".prev-pro").removeClass("opacity-50").addClass("cursor-pointer");
+        if (pro == max_pro-1) $(this).removeClass("cursor-pointer").addClass("opacity-50");
+    }
+    console.log(pro);
+});
+
+$(".prev-pro").on("click", function(){
+    if (pro > 0){
+        $(".carre-container[target="+(pro-1)+"]").css("margin-left", "0");
+        pro--;
+        if (pro <= 9) $(".next-pro").removeClass("opacity-50").addClass("cursor-pointer");
+        if (pro == 0) $(this).removeClass("cursor-pointer").addClass("opacity-50");
+    }
+
+    console.log(pro);
+});
+
 function make_prof(direction, target){
     $(".progress-profil").removeClass("animate-grow").css("width", "0");
     $(".bi[data=part"+par+"]").removeClass("bi-circle-fill").addClass("bi-circle");

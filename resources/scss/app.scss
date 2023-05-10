@@ -89,107 +89,69 @@ important {
     }
 
     section {
-        @apply w-full h-fit p-8 flex flex-col items-center ;
-
         &:first-of-type {
-            
-            > .profil {
-                @apply w-[90%] flex flex-col items-center justify-center m-4 lg:flex-row ;
-
-                > img {
-                    @apply w-[400px] rounded-lg shadow-md object-cover m-4 ;
-                }
-
-                > .right {
-                    @apply bg-white rounded-lg shadow-md text-center p-8 relative ;
-
-                    > .part1, > .part2, > .part3, > .part4 {
-                        @apply transition-all ;
+            @apply w-full h-fit py-8 ;
+            .profil-container {
+                @apply h-fit min-h-[70vh] flex flex-col items-center justify-center ;
+                
+                .profil {
+                    @apply w-[95%] flex flex-col items-center justify-center m-4 lg:flex-row ;
+    
+                    > img {
+                        @apply w-[400px] rounded-lg shadow-md object-cover m-4 ;
+                    }
+    
+                    > .right {
+                        @apply bg-white rounded-lg shadow-md text-center p-8 relative ;
+    
+                        > .part1, > .part2, > .part3, > .part4 {
+                            @apply transition-all ;
+                        }
                     }
                 }
             }
-            
-            > .travaux-container {
-                @apply py-8 px-0 w-full flex flex-wrap justify-center md:py-8 md:px-8 ;
 
-                > .travaux {
-                    @apply w-full my-8 mx-0 flex flex-col bg-white rounded-lg shadow-md transition-all cursor-pointer relative overflow-hidden hover:scale-105 md:w-[400px] md:h-[400px] md:m-8 ;
+            .travaux-container {
+                @apply w-full flex flex-nowrap items-center relative ;
 
-                    > .description {
-                        @apply absolute p-8 flex flex-col top-0 left-0 w-full h-full bg-black/90 text-white transition-all items-center justify-center ;
+                .next-pro, .prev-pro {
+                    @apply text-white text-3xl absolute ;
+                }
 
-                        > p {
-                            @apply text-center ;
+                .next-pro {
+                    @apply right-4 ;
+                }
+
+                .prev-pro {
+                    @apply left-4 ;
+                }
+                
+                .carre-container {
+                    @apply w-full flex items-center justify-center p-4 transition-all ;
+
+                    .carre {
+                        @apply w-full bg-white rounded-lg shadow-lg overflow-hidden lg:w-[65%] ;
+
+                        img {
+                            @apply w-[75%] object-cover mx-auto ;
                         }
 
-                        > a {
-                            @apply w-full ;
+                        .description {
+                            @apply p-4 ;
 
-                            > .btn {
-                                @apply w-full text-white ;
+                            h2 {
+                                @apply text-center ;
+                            }
+
+                            p {
+                                @apply text-center ;
                             }
                         }
                     }
-
-                    > img {
-                        @apply w-[100%] object-cover ;
-                    }
-                    
-                    > .details {
-                        @apply p-4 w-full flex items-center justify-center grow ;
-
-                        > h2 {
-                            @apply text-center ;
-                        }
-
-                        > p {
-                            @apply text-center ;
-                        }
-                    }
-                }
-            }
-        }
-
-        &:nth-of-type(2){
-            @apply bg-white ;    
-        }
-
-        &:nth-of-type(3) {
-            @apply bg-white/30 ;
-            
-            > .competences {
-                @apply flex flex-row flex-wrap items-center justify-center w-[100vw] md:w-[75%];
-    
-                > img {
-                    @apply h-[50px] object-cover m-4 cursor-pointer transition-all hover:scale-110 hover:bg-white hover:rounded-md hover:shadow-md hover:p-4 md:h-[100px] ;
-                }
-            }
-        }
-
-        &:last-of-type{
-            @apply bg-orange-500 text-white;
-
-            > .news-container {
-                @apply w-[100vw] grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:w-[75%] md:text-white;
-
-                .form-floating {
-                    @apply w-full ;
-                }
-
-                label[for=email]{
-                    @apply text-slate-500 ;
                 }
             }
         }
     }
-}
-
-.travaux > .description {
-    opacity: 0;
-}
-
-.travaux:hover > .description {
-    opacity: 1;
 }
 
 .animate-grow {
