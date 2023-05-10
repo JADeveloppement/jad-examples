@@ -119,7 +119,7 @@ important {
                 @apply w-full flex flex-nowrap items-center relative ;
 
                 .next-pro, .prev-pro {
-                    @apply text-white text-3xl absolute ;
+                    @apply text-white text-3xl absolute hidden lg:block ;
                 }
 
                 .next-pro {
