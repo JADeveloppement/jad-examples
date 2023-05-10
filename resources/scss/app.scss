@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -130,7 +134,7 @@ important {
                     @apply w-full flex items-center justify-center p-4 transition-all ;
 
                     .carre {
-                        @apply w-full bg-white rounded-lg shadow-lg overflow-hidden lg:w-[65%] ;
+                        @apply w-full bg-white rounded-lg shadow-lg overflow-hidden p-4 lg:w-[65%] ;
 
                         img {
                             @apply w-[75%] object-cover mx-auto ;

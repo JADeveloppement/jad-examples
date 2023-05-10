@@ -69,23 +69,43 @@ let touchstartX = 0
 let touchendX = 0
 let deltaX = 0;
 
-function checkDirection() {
+function checkDirection(from) {
     deltaX = touchendX - touchstartX;
+    console.log(deltaX);
     if (deltaX < 0){
         if (Math.abs(deltaX) > 50){
-            clearInterval(interval);
-            make_prof(1);
-            interval = setInterval(function(){
-                make_prof();   
-            }, DURATION);
+            if (from == undefined){
+                clearInterval(interval);
+                make_prof(1);
+                interval = setInterval(function(){
+                    make_prof();   
+                }, DURATION);
+            } else {
+                console.log("change");
+                if (pro < max_pro-1){
+                    $(".carre-container[target="+pro+"]").css("margin-left", "-100%");
+                    pro++;
+                    if (pro >= 1) $(".prev-pro").removeClass("opacity-50").addClass("cursor-pointer");
+                    if (pro == max_pro-1) $(".next-pro").removeClass("cursor-pointer").addClass("opacity-50");
+                }
+            }
         }
     } else {
         if (Math.abs(deltaX) > 50){
-            clearInterval(interval);
-            make_prof(-1);
-            interval = setInterval(function(){
-                make_prof();   
-            }, DURATION);
+            if (from == undefined){
+                clearInterval(interval);
+                make_prof(-1);
+                interval = setInterval(function(){
+                    make_prof();   
+                }, DURATION);
+            } else {
+                if (pro > 0){
+                    $(".carre-container[target="+(pro-1)+"]").css("margin-left", "0");
+                    pro--;
+                    if (pro <= 9) $(".next-pro").removeClass("opacity-50").addClass("cursor-pointer");
+                    if (pro == 0) $(".prev-pro").removeClass("cursor-pointer").addClass("opacity-50");
+                }
+            }
         }
     }
 }
@@ -100,3 +120,16 @@ $(".profil > .right").on('mouseup touchend', e => {
     else touchendX = e.screenX;
     checkDirection()
 })
+
+$(".carre-container").on('mousedown touchstart', e => {
+    console.log("ok");
+    if (e.type === "touchstart") touchstartX = e.changedTouches[0].screenX;
+    else touchstartX = e.screenX
+})
+
+$(".carre-container").on('mouseup touchend', e => {
+    if (e.type === "touchend") touchendX = e.changedTouches[0].screenX;
+    else touchendX = e.screenX;
+    checkDirection(1)
+})
+
