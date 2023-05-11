@@ -3,11 +3,15 @@ let mix = require('laravel-mix');
 require ('mix-tailwindcss');
 require('browser-sync');
 
-mix.js('resources/js/app.js', 'public/js')
-.js('resources/js/app_index.js', 'public/js')
-.sass('resources/scss/global.scss', 'public/css')
-.sass('resources/scss/app.scss', 'public/css')
-.sass('resources/scss/app_index.scss', 'public/css')
+mix.js('resources/js/jadeveloppement/app.js', 'public/js/jadeveloppement')
+.js('resources/js/jadeveloppement/app_index.js', 'public/js/jadeveloppement')
+.sass('resources/scss/jadeveloppement/global.scss', 'public/css/jadeveloppement')
+.sass('resources/scss/jadeveloppement/app.scss', 'public/css/jadeveloppement')
+.sass('resources/scss/jadeveloppement/app_index.scss', 'public/css/jadeveloppement')
+.js('resources/js/democrite/app_index.js', 'public/js/democrite')
+.sass('resources/scss/democrite/app_index.scss', 'public/css/democrite')
+.js('resources/js/democrite/app_profil.js', 'public/js/democrite')
+.sass('resources/scss/democrite/app_profil.scss', 'public/css/democrite')
 .tailwind('./tailwind.config.js')
 .browserSync({
     proxy: 'localhost:8000',

@@ -28,15 +28,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        @include("sections.head")
+        <link rel="stylesheet" href="{{ mix('css/jadeveloppement/app.css') }}">
+        @include("jadeveloppement.sections.head")
     </head>
     <body class="antialiased">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <div class="background">
             <img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/html-color-codes-color-tutorials-hero-scaled.jpg" alt="">
         </div>
-        @include("sections.header");
+        @include("jadeveloppement.sections.header");
 
         <section>
             <div class="profil-container">
@@ -118,7 +118,7 @@
                             <div class="description">
                                 <h2>{{ $nom_pro[$i] }}</h2>
                                 <p>
-                                    @include('pro-description.pro'.$i)
+                                    @include('jadeveloppement.pro-description.pro'.$i)
                                 </p>
                                 <a href="{{ $url_pro[$i] }}" class="text-white no-underline w-full flex items-center justify-center" target="_blank"><button class="btn btn-warning w-[85%] m-4 text-white">Visiter</button></a>
                             </div>
@@ -128,7 +128,7 @@
             </div>
         </section>
 
-        @include("sections.footers")
-        <script src="{{ mix('js/app.js') }}"></script>
+        @include("jadeveloppement.sections.footers")
+        <script src="{{ mix('js/jadeveloppement/app.js') }}"></script>
     </body>
 </html>
