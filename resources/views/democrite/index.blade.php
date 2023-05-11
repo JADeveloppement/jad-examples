@@ -74,7 +74,10 @@
             </div>
         </div>
 
-        <div class="footer">Fièrement développé par <b>JADeveloppement</b></div>
+        <footer>
+            <a href="/"><img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon.png" alt=""></a>
+            <span>Développé par <a href="/"><b>JADeveloppement</b></a></span>
+        </footer>
 
         <script type="text/javascript" src="{{ asset('js/democrite/app_index.js') }}" ></script>
     </body>

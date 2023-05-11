@@ -99,8 +99,16 @@
         @apply w-full h-screen p-8 overflow-y-auto ;
     }
 
-    .footer {
-        @apply w-full p-4 text-base text-white bg-black ;
+    footer {
+        @apply p-4 bg-black text-white flex items-center text-sm ;
+
+        a {
+            @apply text-white ;
+        }
+
+        img {
+            @apply w-[30px] mx-8 transition-transform cursor-pointer hover:scale-105 ;
+        }
     }
 
     .menu-active {
