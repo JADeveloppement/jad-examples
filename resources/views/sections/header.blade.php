@@ -9,3 +9,7 @@
         <a href="/contact">Contact</a>
     </div>
 </header>
+
+<div class="loading">
+    <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="">
+</div>

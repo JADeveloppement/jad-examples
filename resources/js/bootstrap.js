@@ -5,10 +5,16 @@
  */
 
 import axios from 'axios';
+import $ from 'jquery';
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+$(".loading").css("opacity", "0");
+
+$(window).on("load", function(){
+    $(".loading").remove();
+})
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

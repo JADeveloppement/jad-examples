@@ -104,8 +104,8 @@
             <div class="w-full h-[75px]"></div>
             <h2 class="text-white text-center">Mes projets</h2>
             <div class="w-full text-center text-white flex justify-center p-4 items-center">
-                <p class="w-[500px]">
-                    Ici, retrouvez mes projets finis ou en cours de développement dont j'ai eu la charge de développement (front-end et backend).
+                <p class="w-[500px] font-bold">
+                    Ici, retrouvez mes projets finis ou en cours de travaux dont j'ai eu la charge de développement (front-end et backend).
                 </p>
             </div>
             <div class="travaux-container">
