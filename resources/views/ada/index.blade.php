@@ -113,8 +113,8 @@
             </div>
         </section>
         <footer>
-            <img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon.png" alt="">
-            <span>Développé par <a href="https://jadeveloppement.fr"><b>JADeveloppement</b></a></span>
+            <a href="/"><img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon.png" alt=""></a>
+            <span>Développé par <a href="/"><b>JADeveloppement</b></a></span>
         </footer>
         <script src="{{ mix('js/ada/app_index.js') }}"></script>
     </body>

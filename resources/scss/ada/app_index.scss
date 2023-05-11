@@ -63,7 +63,7 @@ h2 {
     footer {
         @apply p-4 bg-black text-white flex items-center text-sm ;
 
-        > img {
+        img {
             @apply w-[30px] mx-8 transition-transform cursor-pointer hover:scale-105 ;
         }
     }
