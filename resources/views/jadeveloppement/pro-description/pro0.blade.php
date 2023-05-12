@@ -10,7 +10,7 @@ Actuellement, ce site web est codé en utilisant le framework php Laravel, un fr
 <i><u>Langages utilisés :</u> Sass, Javascript, jQuery, PHP, HTML, CSS</i><br>
 <i><u>Frameworks :</u> Laravel, Laravel-mix, Tailwind-CSS</i><br>
 <i><u>Outils :</u> Ubuntu, VSCode, Git, Jira</i>
-<div class="flex p-4 w-full items-center justify-center">
+<div class="des-icones">
     <i class="fa-brands fa-html5 text-black fa-2xl mx-2"></i>
     <i class="fa-brands fa-css3-alt text-black fa-2xl mx-2"></i>
     <i class="fa-brands fa-square-js text-black fa-2xl mx-2"></i>
@@ -18,7 +18,7 @@ Actuellement, ce site web est codé en utilisant le framework php Laravel, un fr
     <i class="fa-brands fa-laravel text-black fa-2xl mx-2"></i>
     <i class="fa-brands fa-sass text-black fa-2xl mx-2"></i>
     <i class="fa-brands fa-ubuntu text-black fa-2xl mx-2"></i>
-    <i class="fa-brands fa-git text-black fa-2xl mx-2"></i>
+    <i class="fa-brands fa-github text-black fa-2xl mx-2"></i>
     <i class="fa-brands fa-jira text-black fa-2xl mx-2"></i>
 </div>
 </div>

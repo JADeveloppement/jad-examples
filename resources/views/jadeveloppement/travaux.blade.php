@@ -29,7 +29,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <link rel="stylesheet" href="{{ mix('css/jadeveloppement/app.css') }}">
-        <script src="https://kit.fontawesome.com/70bcbebb13.js" crossorigin="anonymous"></script>
+        @include("jadeveloppement.sections.fontawesome")
         @include("jadeveloppement.sections.head")
     </head>
     <body class="antialiased">
@@ -109,7 +109,7 @@
                     Ici, retrouvez mes projets finis ou en cours de travaux dont j'ai eu la charge de développement (front-end et backend).
                 </p>
             </div>
-            <div class="travaux-container">
+            <div class="travaux-container overflow-hidden">
                 <i class="bi bi-caret-right-fill cursor-pointer next-pro"></i>
                 <i class="bi bi-caret-left-fill opacity-50 prev-pro"></i>
                 @for($i = 0; $i < count($nom_pro); $i++)

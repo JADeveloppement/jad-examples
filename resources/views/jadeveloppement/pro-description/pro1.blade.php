@@ -11,7 +11,7 @@
     <i><u>CMS :</u> Wordpress</i><br>
     <i><u>Outils :</u> Ubuntu, VSCode, Firefox</i>
 
-    <div class="flex p-4 w-full items-center justify-center">
+    <div class="des-icones">
         <i class="fa-brands fa-html5 text-black fa-2xl mx-2"></i>
         <i class="fa-brands fa-css3-alt text-black fa-2xl mx-2"></i>
         <i class="fa-brands fa-square-js text-black fa-2xl mx-2"></i>

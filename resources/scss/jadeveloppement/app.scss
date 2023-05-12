@@ -153,6 +153,14 @@ important {
 
                             .description-text {
                                 @apply max-h-[300px] overflow-y-auto ;
+
+                                > .des-icones {
+                                    @apply flex p-8 w-full items-center justify-center flex-wrap ;
+
+                                    > i {
+                                        @apply m-6 ;
+                                    }
+                                }
                             }
                         }
                     }
