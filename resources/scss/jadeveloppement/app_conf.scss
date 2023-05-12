@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content {
+    font-family: "poppins";
+}
+
+h1, h2, h3 {
+    padding: 2rem;
+    position: relative;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+hr {
+    width: 100px;
+    border-top: 3px solid #fff;
+    opacity: 1;
+    color: white !important;
+}
+
+@layer components {
+    .content {
+        @apply min-h-screen h-fit flex flex-col items-center text-white p-8 ;
+
+        .politique-container {
+            @apply w-1/2 ;
+        }
+    }
+}

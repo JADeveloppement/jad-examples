@@ -62,7 +62,7 @@
         <span>Copyright 2023</span>
     </div>
     <div class="right">
-        <a href="">Confidentialité</a>
-        <a href="">Mentions légales</a>
+        <a href="/confidentialite">Confidentialité</a>
+        <a href="/legals">Mentions légales</a>
     </div>
 </footer>

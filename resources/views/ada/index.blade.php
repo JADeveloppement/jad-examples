@@ -37,7 +37,7 @@
             <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/Designer-interieur.jpg" alt="">
         </div>
         <section>
-            <div class="carte accueil flex">
+            <div class="carte accueil flex min-h-fit">
                 <img src="{{ $logo }}" alt="">
                 <h2>Yaël Hollander – Décoratrice d’intérieur et créatrice d’ambiance</h2>
                 <p>

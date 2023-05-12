@@ -1,7 +1,9 @@
 <header>
     <div class="left">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon-black.png" alt="">
-        <h2>JADeveloppement</h2>
+        <a href="/">
+            <img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon-black.png" alt="">
+            <h2>JADeveloppement</h2>
+        </a>
     </div>
     <div class="right">
         <a href="/">Accueil</a>

@@ -22,13 +22,14 @@
         "https://jadeveloppement.fr/index.php/twitch/",
         "/ada",
         "/democrite/",
-        "https://www.figma.com/file/QM1UdZWCA05HujJwhP4Vk5/Conf%C3%A9rence-FATIH?type=design&node-id=1%3A2&t=VJZVuqg2kLWDY2OT-1"]
+        "https://www.figma.com/file/QM1UdZWCA05HujJwhP4Vk5/Conf%C3%A9rence-FATIH?type=design&node-id=1%3A2&t=VJZVuqg2kLWDY2OT-1"];
 
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <link rel="stylesheet" href="{{ mix('css/jadeveloppement/app.css') }}">
+        <script src="https://kit.fontawesome.com/70bcbebb13.js" crossorigin="anonymous"></script>
         @include("jadeveloppement.sections.head")
     </head>
     <body class="antialiased">

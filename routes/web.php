@@ -24,6 +24,14 @@ Route::get('/', function(){
     return view('jadeveloppement/index');
 });
 
+Route::get('/confidentialite', function(){
+    return view('jadeveloppement/confidentialite');
+});
+
+Route::get('/legals', function(){
+    return view('jadeveloppement/mentions_legales');
+});
+
 /*
     DEMOCRITE WEBSITE
 */

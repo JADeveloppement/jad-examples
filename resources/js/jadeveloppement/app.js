@@ -133,3 +133,14 @@ $(".carre-container").on('mouseup touchend', e => {
     checkDirection(1)
 })
 
+$(window).on("load", function(){
+    let max = 0;
+    $(".carre").each(function(){
+        if ($(this).outerHeight() > max) max = $(this).outerHeight();
+        console.log("outerheight : "+$(this).outerHeight() + " MAX : "+max);
+    })
+
+    $(".carre").each(function(){
+        $(this).css("height", max+"px");
+    })
+})

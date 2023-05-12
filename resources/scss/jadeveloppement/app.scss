@@ -148,7 +148,11 @@ important {
                             }
 
                             p {
-                                @apply text-center ;
+                                @apply my-4 ;
+                            }
+
+                            .description-text {
+                                @apply max-h-[300px] overflow-y-auto ;
                             }
                         }
                     }
