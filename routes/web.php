@@ -24,6 +24,10 @@ Route::get('/', function(){
     return view('jadeveloppement/index');
 });
 
+Route::get("/contact", function(){
+    return view("jadeveloppement/contact");
+});
+
 Route::get('/confidentialite', function(){
     return view('jadeveloppement/confidentialite');
 });
