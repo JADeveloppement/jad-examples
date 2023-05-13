@@ -27,22 +27,39 @@
 
         <header>
             <div class="left">
+                <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/btt.png" alt="">
                 <h1>Bob Tahiti</h1>
             </div>
             <div class="right">
-                <p>Hors ligne</p>
+                <div class="status">
+                    <li class="bi bi-circle mx-2"></li>
+                </div>
             </div>
         </header>
         <section>
-
+            <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/BeneficialImaginativeCurlew-size_restricted.gif" alt="">
+            <div class="jadtwitch-container">
+                <div id="twitch-embed"></div>
+            </div>
         </section>
+        <section>
+            <h1>Ma dernière vidéo</h1>
+            
+            <div class="jadyoutube-container">
+                <iframe class="latestVideoEmbed" vnum='0' cid="UCVjS9N-Ao9rM-PCS7m7BAzQ" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <div class="socials">
+            <a href="https://twitter.com/bobtighttea" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCVjS9N-Ao9rM-PCS7m7BAzQ" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://twitch.tv/bobtighttea" target="_blank"><i class="bi bi-twitch"></i></a>
+        </div>
         <footer>
-
+            <img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon.png" alt="">
+            <p>Développé par <a href="/"><b>JADeveloppement</b></a></p>
         </footer>
 
-        <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
-            <div id="twitch-embed"></div>
-        </div>
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
         <script src="{{ mix('js/twitch/app_index.js') }}"></script>
     </body>
 </html>

@@ -19,7 +19,7 @@
         "/",
         "https://jeremyvalance.fr",
         "https://arthurivan.com",
-        "https://jadeveloppement.fr/index.php/twitch/",
+        "/twitch/",
         "/ada",
         "/democrite/",
         "https://www.figma.com/file/QM1UdZWCA05HujJwhP4Vk5/Conf%C3%A9rence-FATIH?type=design&node-id=1%3A2&t=VJZVuqg2kLWDY2OT-1"];
