@@ -24,8 +24,8 @@
                     <label for="prenom">Prénom</label>
                 </div>
                 <div class="form-floating m-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="email">Email address</label>
                 </div>
                 <div class="form-floating m-3">
                     <input type="telephone" class="form-control" id="telephone" placeholder="name@example.com">
@@ -33,8 +33,8 @@
                 </div>
 
                 <div class="form-check m-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" value="" id="donttelephone">
+                    <label class="form-check-label" for="donttelephone">
                         Ne pas me contacter par téléphone
                     </label>
                 </div>
@@ -43,8 +43,9 @@
                     <textarea class="form-control" placeholder="Leave a comment here" id="message" style="height: 100px"></textarea>
                     <label for="message">Votre message</label>
                 </div>
-            </div>
 
+                <button class="btn m-3 bg-orange-500 text-white transition-all hover:bg-orange-800 send-mail ">Envoyer</button>
+            </div>
         </section>
         
         @include("jadeveloppement.sections.footers")

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemocriteController;
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +36,16 @@ Route::get('/confidentialite', function(){
 
 Route::get('/legals', function(){
     return view('jadeveloppement/mentions_legales');
+});
+
+Route::post("/send-mail", function(Request $r){
+    $nom = $r->nom;
+    $prenom = $r->prenom;
+    $email = $r->email;
+    $telephone = $r->telephone;
+    $message = $r->message;
+
+    return json_encode(["r"=>"NOM : ".$nom." PRENOM ".$prenom." EMAIL ".$email." TELEPHONE : ".$telephone." MESSAGE : ".$message ] );
 });
 
 /*
