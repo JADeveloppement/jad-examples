@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    section {
+        @apply h-fit p-8 flex flex-col items-center ;
+
+        > h2 {
+            @apply text-white ;
+        }
+
+        >.form-container {
+            @apply w-1/2 p-8 ;
+        }
+    }
+}

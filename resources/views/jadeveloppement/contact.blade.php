@@ -12,8 +12,39 @@
         @include("jadeveloppement.sections.header")
 
         <section>
-            <h2 class="h2-1">Développons un site web qui vous ressemble</h2>
-            <div class="flex text-white ensemble"><h2 class="h2-2"></h2><h2 class="cursor">|</h2></div>
+            <h2>Formulaire de contact</h2>
+
+            <div class="form-container">
+                <div class="form-floating m-3">
+                    <input type="name" class="form-control" id="nom" placeholder="Nom">
+                    <label for="nom">Nom</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="name" class="form-control" id="prenom" placeholder="Prénom">
+                    <label for="prenom">Prénom</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="telephone" class="form-control" id="telephone" placeholder="name@example.com">
+                    <label for="telephone">Téléphone</label>
+                </div>
+
+                <div class="form-check m-3">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Ne pas me contacter par téléphone
+                    </label>
+                </div>
+
+                <div class="form-floating m-3">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="message" style="height: 100px"></textarea>
+                    <label for="message">Votre message</label>
+                </div>
+            </div>
+
         </section>
         
         @include("jadeveloppement.sections.footers")
