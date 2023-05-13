@@ -5,6 +5,9 @@ use App\Http\Controllers\DemocriteController;
 
 use Illuminate\Http\Request;
 
+use App\Mail\ContactForm;
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,7 +48,14 @@ Route::post("/send-mail", function(Request $r){
     $telephone = $r->telephone;
     $message = $r->message;
 
+    Mail::to('zachari_86@hotmail.fr')->send(new ContactForm());
     return json_encode(["r"=>"NOM : ".$nom." PRENOM ".$prenom." EMAIL ".$email." TELEPHONE : ".$telephone." MESSAGE : ".$message ] );
+});
+
+Route::get("/test", function(){
+    Mail::to('zachari_86@hotmail.fr')->send(new ContactForm());
+
+    return "ok";
 });
 
 /*
