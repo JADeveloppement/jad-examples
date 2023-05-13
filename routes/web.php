@@ -57,3 +57,11 @@ ROute::get("/democrite/log-out", function(){
 Route::get("/ada", function(){
     return view("ada/index");
 });
+
+/*
+    TWITCH
+*/
+
+Route::get("/twitch", function() {
+    return view("twitch/index");
+});

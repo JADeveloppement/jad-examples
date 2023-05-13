@@ -18,5 +18,7 @@
         
         @include("jadeveloppement.sections.footers")
         <script src="{{ mix('js/jadeveloppement/app_contact.js') }}"></script>
+        <script>
+        </script>
     </body>
 </html>
