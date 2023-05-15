@@ -1,5 +1,5 @@
 @php
-    $logo = "https://jadeveloppement.fr/wp-content/uploads/2023/04/logo-300x300.png";
+    $logo = asset("storage/04/logo-300x300.png");
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -34,9 +34,9 @@
             </div>
         </header>
         <div class="cover">
-            <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/Designer-interieur.jpg" alt="">
+            <img src="{{ asset('storage/04/Designer-interieur.jpg')}}" alt="">
         </div>
-        <section>
+        <section class='overflow-hidden'>
             <div class="carte accueil flex min-h-fit">
                 <img src="{{ $logo }}" alt="">
                 <h2>Yaël Hollander – Décoratrice d’intérieur et créatrice d’ambiance</h2>
@@ -53,11 +53,11 @@
                 </p>
 
                 <div class="carousel-examples">
-                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/img1-1-scaled.jpg" alt="">
-                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/img3-1.jpg" alt="">
-                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/img2-1-scaled.jpg" alt="">
-                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/img5.png" alt="">
-                    <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/img4-scaled.jpg" alt="">
+                    <img src="{{asset('storage/04/img1-1-scaled.jpg')}}" alt="">
+                    <img src="{{asset('storage/04/img3-1.jpg')}}" alt="">
+                    <img src="{{asset('storage/04/img2-1-scaled.jpg')}}" alt="">
+                    <img src="{{asset('storage/04/img5.png')}}" alt="">
+                    <img src="{{asset('storage/04/img4-scaled.jpg')}}" alt="">
                 </div>
 
                 <button class="btn btn-lg bg-blue-700 text-white ttransition-color shadow-lg contact-me hover:bg-blue-900">Contactez-moi</button>
@@ -113,7 +113,7 @@
             </div>
         </section>
         <footer>
-            <a href="/"><img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon.png" alt=""></a>
+            <a href="/"><img src="{{asset('storage/01/favicon_white.png')}}" alt=""></a>
             <span>Développé par <a href="/"><b>JADeveloppement</b></a></span>
         </footer>
         <script src="{{ mix('js/ada/app_index.js') }}"></script>

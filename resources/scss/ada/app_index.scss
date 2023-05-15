@@ -37,7 +37,7 @@ h2 {
     }
 
     section {
-        @apply w-full h-fit flex items-center justify-center py-8 ;
+        @apply w-full min-h-fit flex items-start justify-center py-8 overflow-y-auto ;
 
         > .carte {
             @apply w-[80%] h-fit p-8 rounded-lg shadow-lg flex-col items-center justify-center bg-white text-center md:w-1/2 ;

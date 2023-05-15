@@ -25,7 +25,7 @@
 
         <div class="header">
             <div class="left">
-                <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/logo-sans-fond.png" alt="">
+                <img src="{{asset('storage/02/logo-sans-fond.png')}}" alt="">
                 Révisions ECN
             </div>
             <div class="right">
@@ -41,7 +41,7 @@
             }
         </style>
         <div class="content">
-            <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/Hanna-Sudom-How-to-stay-motivated-while-studying-online-rotated-1.jpg" alt="" class="cover">
+            <img src="{{asset('storage/02/Hanna-Sudom-How-to-stay-motivated-while-studying-online-rotated-1.jpg')}}" alt="" class="cover">
             <div class="description flex">
                 <h4 class="text-demo-green text-center w-full">Révisions Démocrite</h4>
                 <p class="text-center">
@@ -51,7 +51,7 @@
                     <br>Retrouvez un suivi par module, ainsi que par item, pour savoir où vous en êtes exactement dans vos révisions.
                     <br>Essayez notre plateforme pour la découvrir avant de vous inscrire pour vous faire une première idée.
                 </p>
-                <img class="my-4" src="https://jadeveloppement.fr/wp-content/uploads/2023/04/Capture-decran-du-2023-04-26-21-35-10.png" alt="">
+                <img class="my-4" src="{{asset('storage/04/Capture-decran-du-2023-04-26-21-35-10.png')}}" alt="">
                 <button type="button" class="btn text-white my-8 do-login" style="background-color: #28a745;" >Connexion</button>
             </div>
 
@@ -75,10 +75,9 @@
         </div>
 
         <footer>
-            <a href="/"><img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon.png" alt=""></a>
+            <a href="/"><img src="{{asset('storage/01/favicon_white.png')}}" alt=""></a>
             <span>Développé par <a href="/"><b>JADeveloppement</b></a></span>
         </footer>
-
         <script type="text/javascript" src="{{ asset('js/democrite/app_index.js') }}" ></script>
     </body>
 </html> 

@@ -20,14 +20,14 @@
     </head>
     <body>
         <div class="loading">
-            <img class="" src="https://jadeveloppement.fr/wp-content/uploads/2023/02/loading.gif" alt="">
+            <img class="" src="{{asset('storage/02/loading.gif')}}" alt="">
             <p class="text-2xl italic">Chargement en cours...</p>
             <span class="waiting animate-pulse italic text-sm my-4 transition-all opacity-0">Cela peut prendre un certain temps si c'est la première fois que vous vous connectez.</span>
         </div>
 
         <header>
             <div class="left">
-                <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/btt.png" alt="">
+                <img src="{{asset('storage/02/btt.png')}}" alt="">
                 <h1>Bob Tahiti</h1>
             </div>
             <div class="right">
@@ -37,7 +37,7 @@
             </div>
         </header>
         <section>
-            <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/BeneficialImaginativeCurlew-size_restricted.gif" alt="">
+            <img src="{{asset('storage/02/BeneficialImaginativeCurlew-size_restricted.gif')}}" alt="">
             <div class="jadtwitch-container">
                 <div id="twitch-embed"></div>
             </div>
@@ -55,7 +55,7 @@
             <a href="https://twitch.tv/bobtighttea" target="_blank"><i class="bi bi-twitch"></i></a>
         </div>
         <footer>
-            <img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon.png" alt="">
+            <img src="{{ asset('storage/01/favicon_white.png') }}" alt="">
             <p>Développé par <a href="/"><b>JADeveloppement</b></a></p>
         </footer>
 

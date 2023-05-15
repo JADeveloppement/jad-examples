@@ -17,22 +17,22 @@
 <section>
     <h2 class="text-center text-white">Mes compétences</h2>
     <div class="competences">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/03/html5.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/03/1452px-CSS3_logo_and_wordmark.svg_.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/03/JavaScript-logo.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/image.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/03/5968313.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/03/1200px-Laravel.svg_.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/03/Vue.js_Logo_2.svg_.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/Tailwind_CSS_Logo.svg_.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/03/1280px-Sass_Logo_Color.svg_.png" alt="">
+        <img src="{{asset('storage/03/html5.png') }}" alt="">
+        <img src="{{asset('storage/03/1452px-CSS3_logo_and_wordmark.svg_.png') }}" alt="">
+        <img src="{{asset('storage/03/JavaScript-logo.png') }}" alt="">
+        <img src="{{asset('storage/02/image.png') }}" alt="">
+        <img src="{{asset('storage/03/5968313.png') }}" alt="">
+        <img src="{{asset('storage/03/1200px-Laravel.svg_.png') }}" alt="">
+        <img src="{{asset('storage/03/Vue.js_Logo_2.svg_.png') }}" alt="">
+        <img src="{{asset('storage/04/Tailwind_CSS_Logo.svg_.png') }}" alt="">
+        <img src="{{asset('storage/03/1280px-Sass_Logo_Color.svg_.png') }}" alt="">
     </div>
     <div class="separator"></div>
     <h2 class="text-center text-white">Mon environnement technique</h2>
     <div class="competences">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/Linux_Logo_in_Linux_Libertine_Font.svg_.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/visual-studio-code-1.png" alt="">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/04/GitHub-Mark.png" alt="">
+        <img src="{{asset('storage/04/Linux_Logo_in_Linux_Libertine_Font.svg_.png')}}" alt="">
+        <img src="{{asset('storage/04/visual-studio-code-1.png')}}" alt="">
+        <img src="{{asset('storage/04/GitHub-Mark.png')}}" alt="">
     </div>
 </section>
 
@@ -64,7 +64,7 @@
 
 <footer>
     <div class="left">
-        <img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon-black.png" alt="">
+        <img src="{{asset(config('medias_link.logo_black'))}}" alt="">
         <span>Copyright 2023</span>
     </div>
     <div class="right">
