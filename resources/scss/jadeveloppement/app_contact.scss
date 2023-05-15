@@ -13,5 +13,11 @@
         >.form-container {
             @apply w-1/2 p-8 ;
         }
+
+        .msg {
+            > span {
+                @apply absolute bottom-0 right-0 text-[0.8rem] text-slate-500 py-[0.75rem] px-[1rem] ;
+            }
+        }
     }
 }

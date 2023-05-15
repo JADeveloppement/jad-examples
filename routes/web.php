@@ -42,20 +42,23 @@ Route::get('/legals', function(){
 });
 
 Route::post("/send-mail", function(Request $r){
-    $nom = $r->nom;
-    $prenom = $r->prenom;
-    $email = $r->email;
-    $telephone = $r->telephone;
-    $message = $r->message;
-
-    Mail::to('zachari_86@hotmail.fr')->send(new ContactForm());
-    return json_encode(["r"=>"NOM : ".$nom." PRENOM ".$prenom." EMAIL ".$email." TELEPHONE : ".$telephone." MESSAGE : ".$message ] );
+    $content = [$r->nom, $r->prenom, $r->email, $r->telephone, $r->message];
+    
+    Mail::to('zachari_86@hotmail.fr')->send(new ContactForm(1, $content));
+    return json_encode(["r" => 1]);
 });
 
-Route::get("/test", function(){
-    Mail::to('zachari_86@hotmail.fr')->send(new ContactForm());
+Route::post("/send-news", function(Request $r){
+    $email = $r->email;
+    $subject = $r->subject;
 
-    return "ok";
+    Mail::to('zachari_86@hotmail.fr')->send(new ContactForm(2, [$email, $subject]));
+    return json_encode(["r"=>1]);
+});
+
+Route::get("/test", function(Request $r){
+    $content = ["Aissaoui", "Jalal", "zachari_86@hotmail.fr", "", "Ceci est un essai de message"];
+    return new ContactForm($r->from, $content);
 });
 
 /*
