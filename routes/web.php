@@ -50,9 +50,27 @@ Route::post("/send-mail", function(Request $r){
 
 Route::post("/send-news", function(Request $r){
     $email = $r->email;
-    $subject = $r->subject;
+    $objet = "Aucun objet";
 
-    Mail::to('zachari_86@hotmail.fr')->send(new ContactForm(2, [$email, $subject]));
+    switch($r->subject){
+        case 1:
+            $objet = "Création de site web";
+            break;
+        case 2:
+            $objet = "Solution graphique";
+            break;
+        case 3:
+            $objet = "Mise à jour d'un site web";
+            break;
+        case 4:
+            $objet = "Autre demande";
+            break;
+        default:
+            $objet = "Erreur dans la récupération d'objet";
+            break;
+    }
+
+    Mail::to('zachari_86@hotmail.fr')->send(new ContactForm(2, [$email, $objet]));
     return json_encode(["r"=>1]);
 });
 

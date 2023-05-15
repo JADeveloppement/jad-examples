@@ -42,17 +42,23 @@
         <div class="separator"></div>
         <div class="news-container">
             <div class="form-floating mr-3">
-                <input type="email" class="form-control shadow-sm" id="email" placeholder="name@example.com">
-                <label for="email" >Email address</label>
+                <input type="email" class="form-control shadow-sm" id="emailnews" placeholder="name@example.com">
+                <label for="emailnews" class="text-slate-700" >Adresse e-mail</label>
             </div>
-            <select class="form-select shadow-sm" id="floatingSelect" aria-label="">
+            <select class="form-select objectnews shadow-sm" id="subjectnews" aria-label="">
                 <option value="0">Objet de votre demande</option>
                 <option value="1">Création de site web</option>
                 <option value="2">Solution graphique</option>
                 <option value="3">Mis à jour d'un site web</option>
                 <option value="4">Autre demande</option>
             </select>
-            <button type="button" class="btn btn-warning text-white shadow-sm" style="background-color: orange;" >Envoyer</button>
+            <button type="button" class="btn btn-warning text-white shadow-sm send-news flex items-center justify-center" style="background-color: orange;" >
+                <svg class="animate-spin h-5 w-5 mr-3 wait-sending transition-all opacity-0 hidden" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Envoyer
+            </button>
         </div>
 </section>
 
@@ -66,3 +72,5 @@
         <a href="/legals">Mentions légales</a>
     </div>
 </footer>
+
+<script src="{{ asset('js/jadeveloppement/app_footer.js') }}"></script>

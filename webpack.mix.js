@@ -5,6 +5,7 @@ require('browser-sync');
 
 mix.js('resources/js/jadeveloppement/app.js', 'public/js/jadeveloppement')
 .js('resources/js/jadeveloppement/app_index.js', 'public/js/jadeveloppement')
+.js('resources/js/jadeveloppement/app_footer.js', 'public/js/jadeveloppement')
 .sass('resources/scss/jadeveloppement/global.scss', 'public/css/jadeveloppement')
 .sass('resources/scss/jadeveloppement/app.scss', 'public/css/jadeveloppement')
 .sass('resources/scss/jadeveloppement/app_index.scss', 'public/css/jadeveloppement')
