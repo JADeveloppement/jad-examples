@@ -57,7 +57,7 @@ important {
     }
 
     header {
-        @apply w-full p-8 flex flex-col justify-center items-center bg-white shadow-sm sm:flex-row sm:justify-between ;
+        @apply w-full p-8 flex flex-col justify-center items-center bg-white shadow-sm md:flex-row sm:justify-between ;
 
         >.left > a {
             @apply w-full flex flex-row items-center justify-center md:justify-normal md:w-fit ;

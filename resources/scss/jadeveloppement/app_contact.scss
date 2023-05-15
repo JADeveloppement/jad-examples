@@ -11,7 +11,7 @@
         }
 
         >.form-container {
-            @apply w-1/2 p-8 ;
+            @apply w-full p-8 lg:w-1/2;
         }
 
         .msg {
