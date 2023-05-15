@@ -71,7 +71,6 @@ let deltaX = 0;
 
 function checkDirection(from) {
     deltaX = touchendX - touchstartX;
-    console.log(deltaX);
     if (deltaX < 0){
         if (Math.abs(deltaX) > 50){
             if (from == undefined){
@@ -81,7 +80,6 @@ function checkDirection(from) {
                     make_prof();   
                 }, DURATION);
             } else {
-                console.log("change");
                 if (pro < max_pro-1){
                     $(".carre-container[target="+pro+"]").css("margin-left", "-100%");
                     pro++;
@@ -122,7 +120,6 @@ $(".profil > .right").on('mouseup touchend', e => {
 })
 
 $(".carre-container").on('mousedown touchstart', e => {
-    console.log("ok");
     if (e.type === "touchstart") touchstartX = e.changedTouches[0].screenX;
     else touchstartX = e.screenX
 })
@@ -137,7 +134,6 @@ $(window).on("load", function(){
     let max = 0;
     $(".carre").each(function(){
         if ($(this).outerHeight() > max) max = $(this).outerHeight();
-        console.log("outerheight : "+$(this).outerHeight() + " MAX : "+max);
     })
 
     $(".carre").each(function(){

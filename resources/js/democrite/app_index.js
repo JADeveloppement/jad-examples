@@ -20,7 +20,6 @@ $("a").on("click", function(e){
 
 $(".do-signin").on("click", function(){
     var login = $("#login").val(), pwd = $("#pwd").val(), _token = $("meta[name=_token]").attr("content");
-    console.log(_token);
     if (pwd.length == 0 || login.length == 0) alert("Veuillez remplir tous les champs s'il vous plait.");
     else {
         $.post(
