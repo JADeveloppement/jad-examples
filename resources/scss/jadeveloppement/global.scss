@@ -33,7 +33,7 @@ important {
 @layer components {
 
     .loading {
-        @apply absolute top-0 left-0 w-full h-screen z-50 flex items-center justify-center bg-white/75 transition-all duration-60000 ;
+        @apply fixed top-0 left-0 w-full h-screen z-50 flex items-center justify-center bg-white/75 transition-all duration-60000 ;
 
         img {
             @apply w-[50px] object-cover ;
