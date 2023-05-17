@@ -9,7 +9,7 @@
     </h4>
     <div class="h-[100px] w-[100px]">
         <div class="progress-module-container">
-            @for($i = 0; $i < 100; $i++)
+            @for($i = 0; $i < 25; $i++)
                 <div class="square"></div>
             @endfor
         </div>
