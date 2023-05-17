@@ -1,18 +1,41 @@
 @php
-    if (!Cookie::has('democrite_id')) redirect("/democrite");
+    use App\Models\User;
 
-    $liste_modules = config("democrite_values.modules");
-    $liste_items = [config("democrite_values.module_1"),
-                    config("democrite_values.module_2"),
-                    config("democrite_values.module_3"),
-                    config("democrite_values.module_4"),
-                    config("democrite_values.module_5"),
-                    config("democrite_values.module_6"),
-                    config("democrite_values.module_7"),
-                    config("democrite_values.module_8"),
-                    config("democrite_values.module_9"),
-                    config("democrite_values.module_10"),
-                    config("democrite_values.module_11")]
+    if (!Cookie::has('democrite_id')) redirect("/democrite");
+    else {
+        $login = Cookie::get('democrite_id');
+        $user_bdd = new User;
+
+        $infos = $user_bdd->where('login', $login)->first();
+
+        $nom = $infos->nom;
+        $prenom = $infos->prenom;
+        $email = $infos->email;
+        $telephone = $infos->telephone;
+        $ville = $infos->ville;
+        $promotion = $infos->promotion;
+        $avancement = $infos->avancement;
+
+        $total_reread = 0;
+        for ($i = 0; $i < strlen($avancement); $i++)
+            if (intval(mb_substr($avancement, $i, 1)) > 0)
+                $total_reread++;
+
+        $nb_item = 0;
+
+        $liste_modules = config("democrite_values.modules");
+        $liste_items = [config("democrite_values.module_1"),
+                        config("democrite_values.module_2"),
+                        config("democrite_values.module_3"),
+                        config("democrite_values.module_4"),
+                        config("democrite_values.module_5"),
+                        config("democrite_values.module_6"),
+                        config("democrite_values.module_7"),
+                        config("democrite_values.module_8"),
+                        config("democrite_values.module_9"),
+                        config("democrite_values.module_10"),
+                        config("democrite_values.module_11")];
+    }
     
 @endphp
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -47,7 +70,7 @@
     <body class="antialiased">
         <div class="header">
             <div class="left">
-                <img src="https://jadeveloppement.fr/wp-content/uploads/2023/02/logo-sans-fond.png" alt="">
+                <img src="{{asset('storage/02/logo-sans-fond.png')}}" alt="">
                 Révisions ECN
             </div>
             <div class="right">
@@ -57,11 +80,11 @@
             </div>
         </div>
         <div class="content">
-            <div class="global-progress-container">
+            <div class="global-progress-container animate-pulse">
                 <h4>Progression générale</h4>
                 <div class="bar-progress-container mt-4">
-                    <div class="bar-progress-color"></div>
-                    <span class="indicator">0/360</span>
+                    <div class="bar-progress-color bg-slate-300" data-color=""></div>
+                    <span class="indicator" data-item="{{$total_reread}}">{{$total_reread}}/{{ strlen($avancement) }}</span>
                 </div>
             </div>
             <hr>
@@ -78,15 +101,15 @@
             <span class="italic text-sm">Pour des raisons de praticité, les fonctionnalités ont été désactivées.</span>
             @for($i = 0; $i < count($liste_modules); $i++)
                 <div class="items-container hidden" data-target="module{{ $i+1 }}">
-                    @for($item = 0; $item < count($liste_items[$i]); $item++)
+                    @for($item = 0; $item < count($liste_items[$i]); $item++, $nb_item++)
                         <div class="item">
                             <div class="left">
                                 {{ $liste_items[$i][$item] }}
                             </div>
                             <div class="right">
-                                <div class="bi bi-plus-lg"></div>
-                                <input type="text" value="0">
-                                <div class="bi bi-dash-lg"></div>
+                                <div class="bi bi-plus-lg" data-item="{{$nb_item}}"></div>
+                                <input type="text" data-item="{{$nb_item}}" value="{{$avancement[$nb_item]}}">
+                                <div class="bi bi-dash-lg" data-item="{{$nb_item}}"></div>
                             </div>
                         </div>
                     @endfor
@@ -117,12 +140,12 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="name" class="form-control" id="promotion" placeholder="Promotion" disabled>
+                    <input type="name" class="form-control" id="promotion" placeholder="Promotion" value="{{$ville}}" disabled>
                     <label for="promotion">Votre promotion</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="name" class="form-control" id="ville" placeholder="Ville" disabled>
+                    <input type="name" class="form-control" id="ville" placeholder="Ville" value="{{$promotion}}" disabled>
                     <label for="ville">Votre ville</label>
                 </div>
             </div>
@@ -154,7 +177,7 @@
         </div>
 
         <footer>
-            <a href="/"><img src="https://jadeveloppement.fr/wp-content/uploads/2023/01/jadeveloppement-favicon.png" alt=""></a>
+            <a href="/"><img src="{{asset('storage/01/favicon_white.png')}}" alt=""></a>
             <span>Développé par <a href="/"><b>JADeveloppement</b></a></span>
         </footer>
         <script src="{{ asset('js/democrite/app_profil.js') }}" ></script>

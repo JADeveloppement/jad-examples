@@ -88,10 +88,11 @@ Route::get('/democrite', function(){
 
 Route::post("/democrite/login", [DemocriteController::class, "try_login"]);
 Route::get("/democrite/profil", [DemocriteController::class, "logged"]);
-ROute::get("/democrite/log-out", function(){
+Route::get("/democrite/log-out", function(){
     Cookie::queue("democrite_id", "", -1);
     return view("democrite/index");
 });
+Route::post("/democrite/update-rev", [DemocriteController::class, "update"]);
 
 /*
     ART DESIGN AGENCEMENT
