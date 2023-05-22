@@ -24,19 +24,15 @@ use Illuminate\Support\Facades\Mail;
 Route::get('/travaux', function () {
     return view('jadeveloppement/travaux');
 });
-
 Route::get('/', function(){
     return view('jadeveloppement/index');
 });
-
 Route::get("/contact", function(){
     return view("jadeveloppement/contact");
 });
-
 Route::get('/confidentialite', function(){
     return view('jadeveloppement/confidentialite');
 });
-
 Route::get('/legals', function(){
     return view('jadeveloppement/mentions_legales');
 });
@@ -47,7 +43,6 @@ Route::post("/send-mail", function(Request $r){
     Mail::to('zachari_86@hotmail.fr')->send(new ContactForm(1, $content));
     return json_encode(["r" => 1]);
 });
-
 Route::post("/send-news", function(Request $r){
     $email = $r->email;
     $objet = "Aucun objet";
@@ -74,24 +69,20 @@ Route::post("/send-news", function(Request $r){
     return json_encode(["r"=>1]);
 });
 
-Route::get("/test", function(Request $r){
-    $content = ["Aissaoui", "Jalal", "zachari_86@hotmail.fr", "", "Ceci est un essai de message"];
-    return new ContactForm($r->from, $content);
-});
-
 /*
     DEMOCRITE WEBSITE
 */
 Route::get('/democrite', function(){
     return view('democrite/index');
 });
-
-Route::post("/democrite/login", [DemocriteController::class, "try_login"]);
 Route::get("/democrite/profil", [DemocriteController::class, "logged"]);
 Route::get("/democrite/log-out", function(){
     Cookie::queue("democrite_id", "", -1);
     return view("democrite/index");
 });
+Route::get("/democrite/reset-pro", [DemocriteController::class, "reset_pro"]);
+
+Route::post("/democrite/login", [DemocriteController::class, "try_login"]);
 Route::post("/democrite/update-rev", [DemocriteController::class, "update"]);
 
 /*

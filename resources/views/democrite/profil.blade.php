@@ -68,6 +68,17 @@
     
     </head>
     <body class="antialiased">
+        <div class="alert-reset-container top-[-100vh]">
+            <div class="alert-reset">
+                <h2 class="mb-4">Confirmer</h2>
+                <p>Êtes-vous sûr de vouloir réinitialiser votre progression ?
+                    <br> Ces changements seront irréversibles.</p>
+                <div class="alert-confirm">
+                    <button class="btn btn-danger shadow-lg m-4 confirm-reset">Oui</button>
+                    <button class="btn btn-secondary shadow-lg cancel-reset">Non</button>
+                </div>
+            </div>
+        </div>
         <div class="header">
             <div class="left">
                 <img src="{{asset('storage/02/logo-sans-fond.png')}}" alt="">
@@ -115,6 +126,12 @@
                     @endfor
                 </div>
             @endfor
+            <div class="progression-fixed">
+                <i class="bi bi-trophy-fill text-3xl"></i>
+                <div class="pf-container">
+                    <div class="pf-bar"></div>
+                </div>
+            </div>
         </div>
         <div class="profil hidden">
             <h4>Vos informations générales</h4>
@@ -169,11 +186,12 @@
             </div>
 
             <hr>
-            <h4>Votre abonnement</h4>
-            <button type="button" class="btn btn-success" disabled>Abonné.e pour 2023/2024</button>
+            <h4>Réinitialiser votre progression</h4>
+            <button type="button" class="btn reset-pro btn-danger">Réinitialiser</button>
 
             <hr>
-            <button type="button" class="btn log-out btn-danger">Déconnexion</button>
+            <h4>Votre abonnement</h4>
+            <button type="button" class="btn btn-success" disabled>Abonné.e pour 2023/2024</button>
         </div>
 
         <footer>

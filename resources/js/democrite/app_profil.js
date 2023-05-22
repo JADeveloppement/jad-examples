@@ -68,6 +68,18 @@ $(".log-out").on("click", function(){
     location = "/democrite/log-out";
 })
 
+$(".reset-pro").on("click", function(){
+    $(".alert-reset-container").removeClass("top-[-100vh]").addClass("top-0");
+})
+
+$(".cancel-reset").on("click", function(){
+    $(".alert-reset-container").removeClass("top-0").addClass("top-[-100vh]");
+})
+
+$(".confirm-reset").on("click", function(){
+    location = "/democrite/reset-pro";
+})
+
 function update(fct, item){
     console.log("UPDATE : "+fct+" ITEM : "+item);
     $.post(
