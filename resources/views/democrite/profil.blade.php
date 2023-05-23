@@ -100,20 +100,19 @@
             </div>
             <hr>
             <h4>Progression par module</h4>
-            <div class="modules-container">
+            <div class="modules-container animate-pulse">
                 @for($a = 0; $a < count($liste_modules); $a++)
                     @include("democrite.module-grid")
                 @endfor
             </div>
             <hr>
-            <div class="titre-module-item">
-                Module 1 - De la conception à la naissance
+            <div class="titre-module-item relative animate-pulse">
+                Module 1 - Apprentissage de l'exercice médical
             </div>
-            <span class="italic text-sm">Pour des raisons de praticité, les fonctionnalités ont été désactivées.</span>
             @for($i = 0; $i < count($liste_modules); $i++)
                 <div class="items-container hidden" data-target="module{{ $i+1 }}">
                     @for($item = 0; $item < count($liste_items[$i]); $item++, $nb_item++)
-                        <div class="item">
+                        <div class="item conteneur" numero="{{ $nb_item }}">
                             <div class="left">
                                 {{ $liste_items[$i][$item] }}
                             </div>
@@ -126,10 +125,11 @@
                     @endfor
                 </div>
             @endfor
-            <div class="progression-fixed">
+            <div class="progression-fixed animate-pulse bottom-[-100vh]">
                 <i class="bi bi-trophy-fill text-3xl"></i>
                 <div class="pf-container">
-                    <div class="pf-bar"></div>
+                    <div class="pf-bar bg-slate-300" data-color=""></div>
+                    <span class="indicator" data-item="{{$total_reread}}">{{$total_reread}}/{{ strlen($avancement) }}</span>
                 </div>
             </div>
         </div>

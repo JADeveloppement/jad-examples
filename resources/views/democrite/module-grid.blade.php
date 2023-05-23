@@ -1,4 +1,5 @@
-<div class="module" numero="{{ $a+1 }}">
+<div class="module relative" numero="{{ $a+1 }}">
+    <i class="bi bi-trophy-fill finished hidden" numero="{{ $a+1 }}" style="box-shadow: 1px 1px 5px rgba(0,0,0,0.3);"></i>
     <h4 class="numero-module">
         Module 
         @if ($a < 9)
@@ -10,7 +11,7 @@
     <div class="h-[100px] w-[100px]">
         <div class="progress-module-container">
             @for($i = 0; $i < 25; $i++)
-                <div class="square"></div>
+                <div class="square bg-slate-100"></div>
             @endfor
         </div>
     </div>

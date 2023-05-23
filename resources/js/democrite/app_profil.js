@@ -25,10 +25,11 @@ function delayColor() {
 
 async function delayedColor() {
     await delayColor();
-    $(".global-progress-container").removeClass("animate-pulse");
-    $(".bar-progress-color").removeClass("bg-slate-300").addClass(check_color()).attr("data-color", check_color()).css("width", pourcentage+"%");
+    $(".animate-pulse").removeClass("animate-pulse");
+    $(".bar-progress-color, .pf-bar").removeClass("bg-slate-300").addClass(check_color()).attr("data-color", check_color()).css("width", pourcentage+"%");
     $(".module[numero=1]").addClass("active");
     $(".items-container[data-target=module1]").removeClass("hidden");
+    update(0, 0);
 }
 
 delayedColor();
@@ -38,7 +39,7 @@ $(".module").on("click", function(){
     var titre_module = $(".module[numero="+module+"] > .module-titre").text(), numero_module = $(".module[numero="+module+"] > .numero-module").text();
     $(this).addClass("active");
     $(".module[numero="+last_module+"]").removeClass("active");
-    $(".titre-module-item").html(numero_module + " - " + titre_module);
+    $(".titre-module-item").text(numero_module + " - " + titre_module);
 
     $(".items-container[data-target=module"+last_module+"]").addClass("hidden");
     $(".items-container[data-target=module"+module+"]").removeClass("hidden");
@@ -80,8 +81,23 @@ $(".confirm-reset").on("click", function(){
     location = "/democrite/reset-pro";
 })
 
+function change_square(avancement){
+    for (var i = 0; i < avancement.length; i++){
+        let nb_square_to_color = Math.floor(avancement[i]*0.25);
+
+        if (nb_square_to_color == 25)
+            $(".finished[numero="+(i+1)+"]").removeClass("hidden");
+        else $(".finished[numero="+(i+1)+"]").addClass("hidden");
+
+        for (var j = 0; j < 25; j++)
+            $(".module[numero="+(i+1)+"] .square:nth-child("+(j+1)+")").addClass("bg-slate-100").removeClass("bg-orange-400");
+
+        for (var j = 0; j < nb_square_to_color; j++)
+            $(".module[numero="+(i+1)+"] .square:nth-child("+(j+1)+")").removeClass("bg-slate-100").addClass("bg-orange-400");
+    }
+}
+
 function update(fct, item){
-    console.log("UPDATE : "+fct+" ITEM : "+item);
     $.post(
         '/democrite/update-rev',
         {_token: $("meta[name=_token]").attr("content"), fct: fct, item: item},
@@ -91,9 +107,10 @@ function update(fct, item){
                 $("input[data-item="+item+"]").attr("value", r.item);
                 $(".indicator").html(r.total_reread+"/"+r.total_number);
                 pourcentage = r.total_reread*100/r.total_number;
-                $(".bar-progress-color").css("width", pourcentage+"%");
-                $(".bar-progress-color").removeClass($(".bar-progress-color").attr("data-color")).addClass(check_color());
-                console.log(check_color());
+                $(".bar-progress-color, .pf-bar").css("width", pourcentage+"%");
+                $(".bar-progress-color, .pf-bar").removeClass($(".bar-progress-color").attr("data-color")).addClass(check_color());
+                change_square(r.module_avancement);
+                $(".conteneur[numero="+r.numero+"]").removeClass("animate-pulse");
             }
             else console.log("Result : "+d);
         }
@@ -106,5 +123,14 @@ $(".bi-plus-lg, .bi-dash-lg").on("click", function(){
     else if ($(this).hasClass("bi-plus-lg")) fct = 1;
     item =  parseInt($(this).attr("data-item"));
 
+    $(".conteneur[numero="+item+"]").addClass("animate-pulse");
+
     update(fct, item);
+})
+
+$(".content").on("scroll", function(){
+    if ($(this).scrollTop() > ($(".header").outerHeight() + $(".global-progress-container").outerHeight())) 
+        $(".progression-fixed").removeClass("bottom-[-100vh]").addClass("bottom-[1rem]");
+    else
+        $(".progression-fixed").removeClass("bottom-[1rem]").addClass("bottom-[-100vh]");
 })
