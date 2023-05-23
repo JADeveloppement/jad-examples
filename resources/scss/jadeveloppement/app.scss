@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.separator {
+    width: 100%;
+    height: 50px;
+}
+
+header > .right > a {
+    text-decoration: none;
+    color: black;
+}
+
+important {
+    color: orange ;
+    font-weight: bold;
+}
+
+@layer components {
+
+    .important {
+        @apply font-bold text-orange-400 ;
+    }
+
+    .zoom-on-hover {
+        @apply transition-all cursor-pointer hover:scale-105 ;
+    }
+
+    .background {
+        @apply fixed top-0 left-0 w-[100vw] h-[100vh] z-[-1] ;
+
+        > img {
+            @apply w-[100vw] h-[100vh] object-cover ;
+        }
+    }
+
+    header {
+        @apply w-full p-8 flex flex-row justify-between bg-white shadow-sm ;
+
+        > .left {
+            @apply w-full flex flex-row items-center justify-center md:justify-normal md:w-fit ;
+
+            > img {
+                @apply w-[70px] object-cover mr-4;
+            }
+
+            > h2 {
+                @apply text-4xl font-bold ;
+            }
+        }
+
+        > .right {
+            @apply w-fit items-center hidden md:flex;
+
+            > a {
+                @apply mr-4 cursor-pointer transition-all hover:underline ;
+            }
+        }
+    }
+
+    footer {
+        @apply w-full p-4 text-sm text-white bg-black flex flex-row justify-between ;
+
+        > .left {
+            @apply flex flex-row items-center ;
+
+            > img {
+                @apply w-[40px] mr-4 invert ;
+            }
+        }
+
+        > .right {
+            @apply flex items-center ;
+
+            > a {
+                @apply text-white no-underline mr-4 transition-all hover:underline ;
+            }
+        }
+    }
+
+    section {
+        &:first-of-type {
+            @apply w-full h-fit py-8 ;
+            .profil-container {
+                @apply h-fit min-h-[70vh] flex flex-col items-center justify-center ;
+                
+                .profil {
+                    @apply w-[95%] flex flex-col items-center justify-center m-4 lg:flex-row ;
+    
+                    > img {
+                        @apply w-[400px] rounded-lg shadow-md object-cover m-4 ;
+                    }
+    
+                    > .right {
+                        @apply bg-white rounded-lg shadow-md text-center p-8 relative ;
+    
+                        > .part1, > .part2, > .part3, > .part4 {
+                            @apply transition-all ;
+                        }
+                    }
+                }
+            }
+
+            .travaux-container {
+                @apply w-full flex flex-nowrap items-center relative ;
+
+                .next-pro, .prev-pro {
+                    @apply text-white text-3xl absolute hidden lg:block ;
+                }
+
+                .next-pro {
+                    @apply right-4 ;
+                }
+
+                .prev-pro {
+                    @apply left-4 ;
+                }
+                
+                .carre-container {
+                    @apply w-full flex items-center justify-center p-4 transition-all ;
+
+                    .carre {
+                        @apply w-full bg-white rounded-lg shadow-lg overflow-hidden p-4 lg:w-[65%] ;
+
+                        img {
+                            @apply w-[75%] object-cover mx-auto ;
+                        }
+
+                        .description {
+                            @apply p-4 ;
+
+                            h2 {
+                                @apply text-center ;
+                            }
+
+                            p {
+                                @apply my-4 ;
+                            }
+
+                            .description-text {
+                                @apply max-h-[300px] overflow-y-auto ;
+
+                                > .des-icones {
+                                    @apply flex p-8 w-full items-center justify-center flex-wrap ;
+
+                                    > i {
+                                        @apply m-6 ;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.animate-grow {
+    transition: all var(--duration) linear;
+}
+
+.right > .progress-profil {
+    width: 0;
+    padding: 3px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+:root {
+    --duration: 60s;
+}

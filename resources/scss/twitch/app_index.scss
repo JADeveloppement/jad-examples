@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+@layer components {
+    .loading {
+        @apply fixed top-0 left-0 w-full h-screen flex items-center justify-center flex-col text-white bg-black z-[999] ;
+
+        > img {
+            @apply w-[200px] ;
+        }
+    }
+
+    header {
+        @apply flex items-center justify-between p-8 shadow-lg ;
+
+        .left, .right {
+            @apply flex items-center ;
+        }
+
+        .left > img {
+            @apply w-[50px] mx-8 ;
+        }
+
+        .right {
+            > .status {
+                @apply flex items-center ;
+            }
+        }
+    }
+
+    section {
+        @apply relative w-full h-screen flex items-center justify-center ;
+
+        > img {
+            @apply absolute top-0 left-0 w-full h-screen z-[-1] ;
+        }
+
+        > .jadtwitch-container {
+            @apply w-full flex items-center justify-center ;
+        }
+
+        &:last-of-type {
+            @apply flex-col justify-start p-8 h-fit ;
+
+            > .jadyoutube-container {
+                @apply w-full flex items-center justify-center flex-col my-8 ;
+            }
+        }
+    }
+
+    .online, .offline {
+        @apply border-2 px-2 py-1 rounded-lg ;
+
+        > li {
+            @apply text-[0.5rem];
+        }
+    }
+
+    footer {
+        @apply flex w-full p-4 text-sm text-white bg-black items-center ;
+
+        >img {
+            @apply w-[40px] mx-4 transition-transform cursor-pointer hover:scale-105 ;
+        }
+    }
+
+    .online {
+        @apply border-lime-600 text-lime-600 hover:bg-lime-600 hover:text-white cursor-pointer ; 
+    }
+
+    .offline {
+        @apply border-red-600 text-red-600 transition-all hover:bg-red-600 hover:text-white cursor-pointer ;
+    }
+
+    .socials {
+        @apply fixed bg-white flex flex-col items-center z-[999] right-[-5px] bottom-[50%] text-4xl rounded-lg shadow-lg ;
+
+        > a {
+            @apply p-4 transition-all hover:scale-105 ;
+            
+            &:first-child {
+                @apply text-blue-700 ;
+            }
+
+            &:nth-child(2) {
+                @apply text-red-700 ;
+            }
+
+            &:last-child {
+                @apply text-violet-700 ;
+            }
+        }
+    }
+}

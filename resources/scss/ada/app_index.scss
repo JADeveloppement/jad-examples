@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+@layer components {
+    header {
+        @apply w-full p-8 flex bg-neutral-300 text-stone-800 items-center justify-center flex-col md:justify-between md:flex-row ;
+
+        .left {
+            @apply flex items-center cursor-pointer text-center md:text-left ;
+
+            > img {
+                @apply w-[60px] mr-4 transition-transform hover:scale-105 ;
+            }
+        }
+
+        .right {
+            @apply flex my-8 sm:my-0 ;
+
+            > a {
+                @apply mx-4 hover:underline ;
+            }
+        }
+    }
+
+    .cover {
+        @apply fixed top-0 left-0 w-full h-screen z-[-1] ;
+
+        > img {
+            @apply w-full h-screen object-cover ;
+        }
+    }
+
+    section {
+        @apply w-full min-h-fit flex items-start justify-center py-8 overflow-y-auto ;
+
+        > .carte {
+            @apply w-[80%] h-fit p-8 rounded-lg shadow-lg flex-col items-center justify-center bg-white text-center md:w-1/2 ;
+
+            > p {
+                @apply my-4 ;
+            }
+
+            > .carousel-examples {
+                @apply w-full flex overflow-hidden my-4 ;
+
+                > img {
+                    @apply transition-all ;
+                }
+            }
+        }
+
+        > .contact {
+            @apply transition-all ;
+        }
+    }
+
+    footer {
+        @apply p-4 bg-black text-white flex items-center text-sm ;
+
+        img {
+            @apply w-[30px] mx-8 transition-transform cursor-pointer hover:scale-105 ;
+        }
+    }
+}

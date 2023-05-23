@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    font-family: "ubuntu" !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,17 +20,25 @@ h2 {
     height: 50px;
 }
 
-header > .right > a {
+header>.right>a {
     text-decoration: none;
     color: black;
 }
 
 important {
-    color: orange ;
+    color: orange;
     font-weight: bold;
 }
 
 @layer components {
+
+    .loading {
+        @apply fixed top-0 left-0 w-full h-screen z-50 flex items-center justify-center bg-white/75 transition-all duration-60000 ;
+
+        img {
+            @apply w-[50px] object-cover ;
+        }
+    }
 
     .important {
         @apply font-bold text-orange-400 ;
@@ -39,19 +51,19 @@ important {
     .background {
         @apply fixed top-0 left-0 w-[100vw] h-[100vh] z-[-1] ;
 
-        > img {
+        >img {
             @apply w-[100vw] h-[100vh] object-cover ;
         }
     }
 
     header {
-        @apply w-full p-8 flex flex-row justify-between bg-white shadow-sm ;
+        @apply w-full p-8 flex flex-col justify-center items-center bg-white shadow-sm md:flex-row sm:justify-between ;
 
-        > .left {
+        >.left > a {
             @apply w-full flex flex-row items-center justify-center md:justify-normal md:w-fit ;
 
             > img {
-                @apply w-[70px] object-cover mr-4;
+                @apply w-[70px] object-cover mr-4 ;
             }
 
             > h2 {
@@ -59,10 +71,10 @@ important {
             }
         }
 
-        > .right {
-            @apply w-fit items-center hidden md:flex;
+        >.right {
+            @apply flex w-fit items-center m-4 md:flex sm:m-0 ;
 
-            > a {
+            >a {
                 @apply mr-4 cursor-pointer transition-all hover:underline ;
             }
         }
@@ -71,61 +83,52 @@ important {
     footer {
         @apply w-full p-4 text-sm text-white bg-black flex flex-row justify-between ;
 
-        > .left {
+        >.left {
             @apply flex flex-row items-center ;
 
-            > img {
+            >img {
                 @apply w-[40px] mr-4 invert ;
             }
         }
 
-        > .right {
-            @apply flex items-center ;
+        >.right {
+            @apply flex items-center;
 
-            > a {
+            >a {
                 @apply text-white no-underline mr-4 transition-all hover:underline ;
             }
         }
     }
 
     section {
-        @apply w-full h-fit p-8 flex flex-col items-center ;
 
-        &:first-of-type {
-            @apply h-screen items-start justify-center ;
-
-            > h2 {
-                @apply text-white ;
-            }
-        }
-
-        &:nth-of-type(2){
-            @apply bg-white ;    
+        &:nth-of-type(2) {
+            @apply bg-white w-full h-fit p-8 flex flex-col items-center ;
         }
 
         &:nth-of-type(3) {
-            @apply bg-white/30 ;
-            
-            > .competences {
-                @apply flex flex-row flex-wrap items-center justify-center w-[100vw] md:w-[75%];
-    
-                > img {
+            @apply bg-white/30 w-full h-fit p-8 flex flex-col items-center ;
+
+            >.competences {
+                @apply flex flex-row flex-wrap items-center justify-center w-[100vw] md:w-[75%] ;
+
+                >img {
                     @apply h-[50px] object-cover m-4 cursor-pointer transition-all hover:scale-110 hover:bg-white hover:rounded-md hover:shadow-md hover:p-4 md:h-[100px] ;
                 }
             }
         }
 
-        &:last-of-type{
-            @apply bg-orange-500 text-white;
+        &:last-of-type {
+            @apply bg-orange-500 text-white w-full h-fit p-8 flex flex-col items-center ;
 
-            > .news-container {
-                @apply w-[100vw] grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:w-[75%] md:text-white;
+            >.news-container {
+                @apply w-[100vw] grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:w-[75%] md:text-white ;
 
                 .form-floating {
                     @apply w-full ;
                 }
 
-                label[for=email]{
+                label[for=email] {
                     @apply text-slate-500 ;
                 }
             }
@@ -133,11 +136,11 @@ important {
     }
 }
 
-.travaux > .description {
+.travaux>.description {
     opacity: 0;
 }
 
-.travaux:hover > .description {
+.travaux:hover>.description {
     opacity: 1;
 }
 
@@ -145,7 +148,7 @@ important {
     transition: all var(--duration) linear;
 }
 
-.right > .progress-profil {
+.right>.progress-profil {
     width: 0;
     padding: 3px;
     background-color: orange;
@@ -154,7 +157,8 @@ important {
     left: 0;
 }
 
-.h2-1, .ensemble {
+.h2-1,
+.ensemble {
     opacity: 0;
     transition: all 3s;
 }
